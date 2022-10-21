@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Gabriel Freitas">
+    <link rel="shortcut icon" href="public/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <title>GeeK's House</title>
+</head>
+
+<body>
+
+    <!-- header section começo -->
+
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="public/img/logo.png" alt="">
+        </a>
+
+        <!-- <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#about">sobre</a>
+            <a href="#promocoes">Promoções</a>
+            <a href="#animes">produtos</a>
+            <a href="#comentarios">avaliações</a>
+            <a href="#contact">contatos</a>
+            <a href="#blogs">blogs</a>
+        </nav> -->
+
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <a href="#home">home</a>
+                </li>
+                <li>
+                    <a href="#about">sobre</a>
+                </li>
+                <li>
+                    <a href="#promocoes">Promoções</a>
+                </li>
+                <li class="navbar-dropdown" onclick="list()">
+
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Categorias <i class="fa fa-solid fa-caret-right"></i></a>
+                    <div id="lista">
+                        <ul class="dropdown-content" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#animes">Animes & Mangás</a></li>
+                            <li><a class="dropdown-item" href="#boxes">Boxes & Coleções</a></li>
+                            <li><a class="dropdown-item" href="#funko">Funkos POP!</a></li>
+                            <li><a class="dropdown-item" href="#diversos">Produtos Diversos</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Dropdown list pra listar as categorias na navbar -->
+                </li>
+                <li>
+                    <a href="#comentarios">avaliações</a>
+                </li>
+                <li>
+                    <a href="#contact">contatos</a>
+                </li>
+                <li>
+                    <a href="#blogs">blogs</a>
+                </li>
+
+
+            </ul>
+        </nav>
+
+
+
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="Pesquise aqui...">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
+
+        <div class="cart-items-container">
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="public/img/cart-item-1.png" alt="">
+                <div class="content">
+                    <h3>POP! - Avatar Aang - Zuko</h3>
+                    <div class="price">R$149,99/-</div>
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="public/img/cart-item-2.png" alt="">
+                <div class="content">
+                    <h3>Luminária "?" Mário</h3>
+                    <div class="price">R$59,99/-</div>
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="public/img/cart-item-3.png" alt="">
+                <div class="content">
+                    <h3>Abajur LED anime</h3>
+                    <div class="price">R$30,00/-</div>
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="public/img/cart-item-4.webp" alt="">
+                <div class="content">
+                    <h3>Quadro de parede 5 peças Naruto</h3>
+                    <div class="price">R$190,99/-</div>
+                </div>
+            </div>
+            <a href="#" class="btn">Abrir carrinho</a>
+        </div>
+
+    </header>
+
+
+    <!-- home section começo  -->
+
+    <section class="home" id="home">
+
+        <div class="content">
+            <h3>Sua loja Geek ao seu alcance</h3>
+            <p>Tudo que você precisa e deseja do mundo Geek a dois cliques de distância.</p>
+            <a href="#promocoes" class="btn">Começar a comprar</a>
+        </div>
+
+    </section>
+
+
+
+    <!-- Sobre Nós section começo  -->
+
+    <section class="about" id="about">
+
+        <h2 class="heading"> <span>Sobre</span> nós </h2>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="public/img/about-img.jpg" alt="">
+            </div>
+
+            <div class="content">
+                <h3>O que nos faz tão especiais?</h3>
+                <p>Além do nosso fácil acesso ao apoio ao cliente (SAC), temos como diferencial o preço acessível e como
+                    valor a total satisfação dos nosso clientes.</p>
+                <p>além disso, sempre buscamos entender nossos cliente, sentir como sentem e viver como vivem, afinal,
+                    SOMOS TODOS GEEKS.</p>
+                <a href="#" class="btn">Ler mais</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!--  Promoções section inicio -->
+
+
+    <section class="promocoes" id="promocoes">
+
+        <h2 class="heading"> Promoções <span>especiais</span> </h2>
+
+        <div class="roll" id="roll">
+            <div class="box-container">
+
+                <div class="box">
+                    <img src="public/img/promocao-1.png" alt="Quadro Kimetsu" title="Quadro Kimetsu no Yaiba">
+                    <h3>Quadro Kimetsu no Yaiba</h3>
+                    <div class="price">R$15,00 <span>30,00</span></div>
+                    <a href="#" class="btn">add carrinho</a>
+                </div>
+
+                <div class="box">
+                    <img src="public/img/promocao-2.png" alt="Mangá One Piece edição 3 em 1 vol03"
+                        title="Mangá One Piece edição 3 em 1 vol03">
+                    <h3>One piece 3 em 1 - 03</h3>
+                    <div class="price">$70,00 <span>85,00</span></div>
+                    <a href="#" class="btn">add carrinho</a>
+                </div>
+
+                <div class="box">
+                    <img src="public/img/promocao-3.jpg" alt="Livro O Batman Que Ri: Dc Deluxe"
+                        title="Livro O Batman Que Ri: Dc Deluxe">
+                    <h3>Livro - O Batman Que Ri: Deluxe</h3>
+                    <div class="price">$89,00 <span>99,00</span></div>
+                    <a href="#" class="btn">add carrinho</a>
+                </div>
+
+                <div class="box">
+                    <img src="public/img/promocao-4.webp" alt="Action Figure: Batman Arkham Knight Escala 1/6"
+                        title="Action Figure: Batman Arkham Knight Escala 1/6">
+
+                    <h3>Batman Arkham Knight Escala 1/6</h3>
+                    <div class="price">R$4.800,00 <span>5000</span></div>
+                    <a href="#" class="btn">add carrinho</a>
+                </div>
+
+                <div class="box">
+                    <img src="public/img/promocao-5.png" alt="Quadro Kimetsu" title="Quadro Kimetsu no Yaiba">
+                    <h3>Caneca - No Coffee No Forcee</h3>
+                    <div class="price">R$19,99 <span>29,99</span></div>
+                    <a href="#" class="btn">add carrinho</a>
+                </div>
+
+                <div class="box">
+                    <img src="public/img/promocao-6.png" alt="Quadro Kimetsu" title="Quadro Kimetsu no Yaiba">
+                    <h3>mini bag - rick and morty - rick</h3>
+                    <div class="price">R$40,00 <span>60,00</span></div>
+                    <a href="#" class="btn">add carrinho</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Categorias section inicio -->
+
+    <section class="categorias" id="categorias">
+        <h2 class="heading"> <span>Categorias</span> </h2>
+        <!-- categorias animes e mangás section inicio -->
+
+        <section class="animes" id="animes">
+
+            <h2 class="heading"> Animes & <span>Mangás</span> </h2>
+
+            <div class="box-container">
+
+                <div class="box-produtos">
+                    <div class="icons">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="public/img/manga-1.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Kimetsu no yaiba - vol 1</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">R$19,99 </div>
+                    </div>
+                </div>
+
+                <div class="box-produtos">
+                    <div class="icons">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="public/img/manga-2.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>spy x family - vol 1</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">R$29,99 </div>
+                    </div>
+                </div>
+
+                <div class="box-produtos">
+                    <div class="icons">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="public/img/manga-3.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>hunter x hunter - vol 1</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">R$19,99 </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+
+        <!-- Boxes section inicio -->
+
+        <section class="boxes" id="boxes">
+            <h2 class="heading">Boxes & <span>Coleções</span></h2>
+
+            <div class="box-container">
+                <div class="box-produtos">
+                    <div class="icons">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="public/img/box-1.png" alt="imagem Box monogatari Series temporada 1 (Inglês)"
+                            title="imagem Box monogatari Series temporada 1 (Inglês)">
+                    </div>
+                    <div class="content">
+                        <h3>Box monogatari Series temporada 1 (Inglês)</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">R$490,00</div>
+                    </div>
+                </div>
+
+                <div class="box-produtos">
+                    <div class="icons">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="public/img/box-2.png" alt="Box Castelo animado">
+                    </div>
+                    <div class="content">
+                        <h3>Box Castelo animado trilogia completa</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">R$90,00</div>
+                    </div>
+                </div>
+
+
+                <div class="box-produtos">
+                    <div class="icons">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="public/img/box-3.png" alt="imagem Box Marvel Guerra Civil: Guerras secretas"
+                            title="Box Marvel Guerra Civil: Guerras secretas">
+                    </div>
+                    <div class="content">
+                        <h3>Box Marvel Guerra Civil Guerras secretas</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">R$40,00</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- categorias pops funkos section inicio-->
+        <section class="funko" id="funko">
+            <h2 class="heading">Funkos <span>POP!</span></h2>
+
+            <div class="box-container">
+
+                <div class="box-produtos">
+                    <div class="icons">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="public/img/funko-1.png" alt="Imagem Funko POP Tanjiro" title="Funko POP Tanjiro">
+                    </div>
+                    <div class="content">
+                        <h3>POP! - Demon slayer - Tanjiro</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="price">R$150.00</div>
+                    </div>
+                </div>
+
+                <div class="box-produtos">
+                    <div class="icons">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="public/img/funko-2.png" alt="Imagem Funko POP Inosuke" title="Funko POP Inosuke">
+                    </div>
+                    <div class="content">
+                        <h3>POP! - Demons Slayer - Inosuke</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="price">R$150.00</div>
+                    </div>
+                </div>
+
+                <div class="box-produtos">
+                    <div class="icons">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="public/img/funko-3.png" alt="Imagem Funko POP Minato" title="Funko POP Minato">
+                    </div>
+                    <div class="content">
+                        <h3>POP! - Naruto Shippuden - Minato</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="price">R$140.00</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- categorias diversos inicio -->
+
+        <section class="diversos" id="diversos">
+            <h2 class="heading">Produtos <span>diversos</span></h2>
+
+            <div class="roll">
+                <div class="box-container">
+
+                    <div class="box">
+                        <div class="icons">
+                            <a href="#" class="fas fa-shopping-cart select"></a>
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </div>
+
+                        <div class="image">
+                            <img src="public/img/diversos-1.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>Luminária "?" Mário</h3>
+
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="price">R$59,99</div>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="icons">
+                            <a href="#" class="fas fa-shopping-cart select"></a>
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </div>
+
+                        <div class="image">
+                            <img src="public/img/diversos-2.png" alt="imagem POP! Zuko Avatar Aang"
+                                title="POP! Zuko Avatar Aang">
+                        </div>
+                        <div class="content">
+                            <h3>Abajur LED anime</h3>
+
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="price">R$30,00</div>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="icons">
+                            <a href="#" class="fas fa-shopping-cart select"></a>
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </div>
+
+                        <div class="image">
+                            <img src="public/img/diversos-3.webp" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>Quadro 5 Peças Naruto</h3>
+
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="price">R$190,99</div>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="icons">
+                            <a href="#" class="fas fa-shopping-cart"></a>
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </div>
+
+                        <div class="image">
+                            <img src="public/img/diversos-4.webp" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>Sticker The Mandalorian</h3>
+
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="price">R$6,99</div>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="icons">
+                            <a href="#" class="fas fa-shopping-cart"></a>
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </div>
+
+                        <div class="image">
+                            <img src="public/img/diversos-5.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>Peso para porta - "?" Mario</h3>
+
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="price">R$40,00</div>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="icons">
+                            <a href="#" class="fas fa-shopping-cart"></a>
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </div>
+
+                        <div class="image">
+                            <img src="public/img/diversos-6.webp" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>Tênis customizado - Tanjiro </h3>
+
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="price">R220,00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+        </section>
+
+    </section>
+
+
+
+    <!-- review section starts  -->
+
+    <section class="comentarios" id="comentarios">
+
+        <h2 class="heading"> Principais <span>Comentários</span> </h2>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="public/img/quote-img.png" alt="" class="quote">
+                <p>Adorei o tema do site, fácil de entender e usar, compraria novamente.</p>
+                <img src="public/img/perfil-1.jpg" class="user" alt="">
+                <h3>Noob Master 69</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="public/img/quote-img.png" alt="" class="quote">
+                <p>Site responsivo, bonito, com ótimo visual e intuitivo.</p>
+                <img src="public/img/perfil-2.webp" class="user" alt="">
+                <h3>Katana Mask</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="public/img/quote-img.png" alt="" class="quote">
+                <p>Ótimo site, design bonito, fácil de usar e entender.</p>
+                <img src="public/img/perfil-3.jpg" class="user" alt="">
+                <h3>Chrissy WakeUp</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- contact section starts  -->
+
+    <section class="contact" id="contact">
+
+        <h2 class="heading"> <span>Fale</span> Conosco </h2>
+
+        <div class="row">
+
+            <iframe class="map" src="https://maps.google.com/maps?q=pinheiros&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                allowfullscreen="" loading="lazy"></iframe>
+
+            <form action="">
+                <h3>Apenas <span> um </span> toque</h3>
+                <div class="inputBox">
+                    <span class="fas fa-user"></span>
+                    <input type="text" placeholder="nome">
+                </div>
+                <div class="inputBox">
+                    <span class="fas fa-envelope"></span>
+                    <input type="email" placeholder="email">
+                </div>
+                <div class="inputBox">
+                    <span class="fas fa-phone"></span>
+                    <input id="telefone" type="tel" placeholder="(99)99999-9999" maxlength="14"
+                        onkeypress="mascara(this)">
+                </div>
+                <input type="submit" value="enviar" class="btn">
+            </form>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- blogs section starts  -->
+
+    <section class="blogs" id="blogs">
+
+        <h2 class="heading"> nossos <span>blogs</span> </h2>
+
+        <div class="box-container">
+
+            <div class="box">
+                <div class="image">
+                    <img src="public/img/blog-1.webp" alt="">
+                </div>
+                <div class="content">
+                    <a href="#" class="title">Computer GeeK</a>
+                    <span>por: SuperUser / 18 set, 2022</span>
+                    <p>Encontre outras pessoas, outros Geeks, Blogs para Geeks e Gamers</p>
+                    <a href="#" class="btn">Saiba mais</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="public/img/blog-2.jpg" alt="">
+                </div>
+                <div class="content">
+                    <a href="#" class="title">the Proud's Geeks</a>
+                    <span>por: ADM / 08 set, 2022</span>
+                    <p>Encontre novas pessoas e viva num ambiente agradável e social</p>
+                    <a href="#" class="btn">Saiba mais</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="public/img/blog-3.jpg" alt="">
+                </div>
+                <div class="content">
+                    <a href="#" class="title">Geeks Evolution</a>
+                    <span>Por: LifeStudent / 10 mar, 2022'</span>
+                    <p>Descubra a origem dos humanos geeks, a nova espécie em ascendência</p>
+                    <a href="#" class="btn">Saiba mais</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- footer section starts  -->
+
+    <section class="footer">
+
+        <div class="share">
+            <a href="#" class="fab fa-facebook-f" title="Facebook"></a>
+            <a href="#" class="fab fa-twitter" title="Twitter"></a>
+            <a href="#" class="fab fa-instagram" title="Instagram"></a>
+            <a href="https://www.linkedin.com/in/gabrielfreitassouza/" class="fab fa-linkedin" title="Linkedin"></a>
+            <a href="https://github.com/GabrielSouza45" class="fab fa-github" title="Github"></a>
+        </div>
+
+        <div class="links">
+            <a href="#home">home</a>
+            <a href="#about">sobre nós</a>
+            <a href="#promocoes">promoções</a>
+            <a href="#animes">produtos</a>
+            <a href="#comentarios">comentários</a>
+            <a href="#contact">contato</a>
+            <a href="#blogs">blogs</a>
+        </div>
+
+        <div class="credit"> &copy; Criado por: <span>Dev_Gabriel.Freitas </span> | todos os direitos reservados</div>
+
+    </section>
+
+
+
+    <!-- custom js file link  -->
+    <script src="public/js/script.js"></script>
+
+</body>
+
+</html>
