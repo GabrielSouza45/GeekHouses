@@ -10,6 +10,12 @@
     <link rel="shortcut icon" href="public/img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="public/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("eiqD-g-K7UdaNabfm");
+        })();
+    </script>
 
     <title>GeeK's House</title>
 </head>
@@ -702,23 +708,26 @@
             <iframe class="map" src="https://maps.google.com/maps?q=pinheiros&t=&z=13&ie=UTF8&iwloc=&output=embed"
                 allowfullscreen="" loading="lazy"></iframe>
 
-            <form action="">
+            <div class="form">
                 <h3>Apenas <span> um </span> toque</h3>
                 <div class="inputBox">
                     <span class="fas fa-user"></span>
-                    <input type="text" placeholder="nome">
+                    <input type="text" id="name" placeholder="nome">
                 </div>
                 <div class="inputBox">
                     <span class="fas fa-envelope"></span>
-                    <input type="email" placeholder="email">
+                    <input type="email" id="email" placeholder="email">
                 </div>
                 <div class="inputBox">
                     <span class="fas fa-phone"></span>
-                    <input id="telefone" type="tel" placeholder="(99)99999-9999" maxlength="14"
+                    <input id="phone" type="tel" placeholder="(99)99999-9999" maxlength="14"
                         onkeypress="mascara(this)">
                 </div>
-                <input type="submit" value="enviar" class="btn">
-            </form>
+                <div class="inputBox">
+                    <textarea name="message" id="message" rows="5" placeholder="Em que podemos ajudar?"></textarea>
+                </div>
+                <button  class="btn" onclick="sendMail()">Enviar</button>
+            </div>
 
         </div>
 

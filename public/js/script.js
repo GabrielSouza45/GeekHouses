@@ -1,6 +1,6 @@
 let navbar = document.querySelector('.navbar');
 
-document.querySelector('#menu-btn').onclick = () =>{
+document.querySelector('#menu-btn').onclick = () => {
     navbar.classList.toggle('active');
     searchForm.classList.remove('active');
     cartItem.classList.remove('active');
@@ -9,7 +9,7 @@ document.querySelector('#menu-btn').onclick = () =>{
 
 let searchForm = document.querySelector('.search-form');
 
-document.querySelector('#search-btn').onclick = () =>{
+document.querySelector('#search-btn').onclick = () => {
     searchForm.classList.toggle('active');
     navbar.classList.remove('active');
     cartItem.classList.remove('active');
@@ -18,7 +18,7 @@ document.querySelector('#search-btn').onclick = () =>{
 
 let cartItem = document.querySelector('.cart-items-container');
 
-document.querySelector('#cart-btn').onclick = () =>{
+document.querySelector('#cart-btn').onclick = () => {
     cartItem.classList.toggle('active');
     navbar.classList.remove('active');
     searchForm.classList.remove('active');
@@ -27,11 +27,11 @@ document.querySelector('#cart-btn').onclick = () =>{
 
 let dropitem = document.querySelector("#lista");
 
-function list(){
+function list() {
     dropitem.classList.toggle('active');
     cartItem.classList.remove('active');
     searchForm.classList.remove('active');
-    
+
 }
 
 
@@ -63,7 +63,7 @@ function list(){
 
 // let dropitem = document.querySelector('#lista');
 // function list(){
-    
+
 //     dropitem.classList.add("active")
 //     if()
 //     // dropitem.classList.toggle('active');
@@ -78,23 +78,48 @@ function list(){
 // $drop.addEventListener('click', function(e){
 //   //reset a ação padrão do click
 //   e.preventDefault();
-  
+
 //   //adiciona e retira classe da lista do menu
 //   $dropitem.classList.toggle('lista--open');
 // })
 
-window.onscroll = () =>{
+window.onscroll = () => {
     navbar.classList.remove('active');
     searchForm.classList.remove('active');
     cartItem.classList.remove('active');
 }
 
-function mascara(telefone){
-    if(telefone.value.length == 0)
+function mascara(telefone) {
+    if (telefone.value.length == 0)
         telefone.value = '(' + telefone.value;
-    if(telefone.value.length == 3)
-        telefone.value =  telefone.value + ')';
+    if (telefone.value.length == 3)
+        telefone.value = telefone.value + ')';
 
-    if(telefone.value.length == 9)
+    if (telefone.value.length == 9)
         telefone.value = telefone.value + '-';
+}
+
+function sendMail() {
+    var params = {
+        name: document.getElementById('name').value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        message: document.getElementById("message").value,
+    }
+
+    const serviceID = "service_y011dzo";
+    const templateID = "template_iekkssv";
+
+    emailjs
+        .send(serviceID, templateID, params)
+        .then((res) => {
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("phone").value = "";
+            document.getElementById("message").value = "";
+            console.log(res);
+            alert("Sua mensagem foi enviada com sucesso!");
+
+        })
+        .catch((err) => console.log(err));
 }
